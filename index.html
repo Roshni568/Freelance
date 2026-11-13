@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Forever Love ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ffe0ec, #ffc2d5, #fff0f5);
+    color: #a8325b;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+nav {
+    padding: 18px;
+    background: rgba(255,255,255,0.55);
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+section {
+    padding: 65px 20px;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    min-height: 90vh;
+}
+
+h1 {
+    font-size: clamp(32px, 7vw, 52px);
+    margin: 15px;
+}
+
+h2 {
+    margin: 15px;
+    font-size: 29px;
+}
+
+p {
+    max-width: 550px;
+    line-height: 1.9;
+    font-size: 17px;
+    margin: 12px auto;
+}
+
+.bunnies {
+    font-size: 75px;
+    margin: 20px;
+    animation: bounce 2s infinite;
+}
+
+button {
+    background: #ff5c8a;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 25px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #e98ba7;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #e83e73;
+}
+
+.card {
+    background: rgba(255,255,255,0.72);
+    border-radius: 25px;
+    padding: 30px;
+    max-width: 520px;
+    width: 95%;
+    margin: 20px auto;
+    box-shadow: 0 8px 25px #e8a4b9;
+}
+
+.hidden {
+    display: none;
+}
+
+.bunny {
+    font-size: 50px;
+    margin: 10px;
+}
+
+.love-item {
+    background: #fff0f5;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+    font-size: 17px;
+}
+
+footer {
+    padding: 35px;
+    background: #ffb4cc;
+    color: #9b3157;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    pointer-events: none;
+    animation: float 7s linear forwards;
+    z-index: 10;
+}
+
+@keyframes float {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes glow {
+    50% { text-shadow: 0 0 20px #ff4d88; }
+}
+
+h1 {
+    animation: glow 2s infinite;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    ♡ OUR LITTLE LOVE WORLD ♡
+</nav>
+
+<!-- HOME -->
+<section class="hero">
+
+    <div class="bunnies">🐰💕🐰</div>
+
+    <h1>Hey My Favourite Human ❤️</h1>
+
+    <p>
+        I made a little world for you.
+        A place full of love, hugs, kisses
+        and everything that reminds me of you.
+    </p>
+
+    <p>
+        Ready to explore our little love story? 🥹
+    </p>
+
+    <button onclick="document.getElementById('letter').scrollIntoView()">
+        Open My Heart 💌
+    </button>
+
+</section>
+
+<!-- LOVE LETTER -->
+<section id="letter">
+
+    <div class="card">
+
+        <div class="bunny">🐰💌</div>
+
+        <h2>A Little Letter For You</h2>
+
+        <p>
+            My Love,
+            <br><br>
+            I don't know how to explain how special
+            you are to me. Sometimes a simple message
+            from you makes my entire day better.
+            <br><br>
+            You are my favourite person to annoy,
+            my favourite smile, and my favourite
+            thought before sleeping.
+            <br><br>
+            I may not always express it perfectly,
+            but I hope you always know how much
+            you mean to me.
+            <br><br>
+            I choose you. Today, tomorrow and
+            in every little lifetime. ❤️
+            <br><br>
+            Forever yours. 💋
+        </p>
+
+    </div>
+
+</section>
+
+<!-- REASONS -->
+<section>
+
+    <h2>Little Things That Make Me Love You More💗</h2>
+
+    <div class="card">
+
+        <div class="love-item">🥰 Your beautiful smile</div>
+        <div class="love-item">💕 The way you make me happy</div>
+        <div class="love-item">🐰 Your cute little habits</div>
+        <div class="love-item">💋 Your hugs and kisses</div>
+        <div class="love-item">❤️ Simply because you are YOU</div>
+
+    </div>
+
+</section>
+
+<!-- QUESTION -->
+<section>
+
+    <div class="card">
+
+        <div class="bunny">🐰🥺</div>
+
+        <h2>How Much Do You Love Me?</h2>
+
+        <p>Choose your answer carefully, mister! 😏</p>
+
+        <button onclick="answer('A little? Not accepted! 😤❤️')">
+            A Little
+        </button>
+
+        <button onclick="answer('Infinity and beyond! That is the correct answer! 💕')">
+            To Infinity ♾️
+        </button>
+
+        <button onclick="answer('Wrong! You must love me more than the universe! 😘')">
+            More Than Everything
+        </button>
+
+        <h3 id="answer"></h3>
+
+    </div>
+
+</section>
+
+<!-- SECRET SURPRISE -->
+<section>
+
+    <div class="card">
+
+        <div class="bunny">🎀🐰🎀</div>
+
+        <h2>A Secret Surprise For You</h2>
+
+        <p>
+            There is something hidden here.
+            Can you find it?
+        </p>
+
+        <button onclick="showSecret()">
+            Unlock Your Surprise 🎁
+        </button>
+
+        <div id="secret" class="hidden">
+
+            <h2>Surpriseeeee!! 💋</h2>
+
+            <p>
+                Sending you 1000 virtual kisses,
+                unlimited hugs and one very clingy
+                girlfriend forever! ❤️
+            </p>
+
+            <div class="bunny">🐰💋🐰</div>
+
+            <h2>I LOVE YOUUU! ❤️</h2>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOREVER -->
+<section>
+
+    <div class="card">
+
+        <div class="bunnies">🐰🌷🐰</div>
+
+        <h2>Our Little Forever</h2>
+
+        <p>
+            I don't need a fairytale.
+            I just want real moments with you.
+            <br><br>
+            Silly conversations, random dates,
+            long hugs, little fights,
+            making up and growing together.
+            <br><br>
+            Let's create a thousand beautiful memories.
+            <br><br>
+            You + Me = My Favourite Story ❤️
+        </p>
+
+        <button onclick="kiss()">
+            Send Me A Kiss 💋
+        </button>
+
+        <h2 id="kiss"></h2>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <div style="font-size:45px">🐰❤️🐰</div>
+
+    <h2>Made With All My Love</h2>
+
+    <p>
+        Just for you, my favourite person.
+        <br>
+        Forever and always. 💗
+    </p>
+
+    <p>♡ ENDLESS LOVE ♡</p>
+
+</footer>
+
+<script>
+
+function answer(message) {
+    document.getElementById("answer").innerText = message;
+    hearts();
+}
+
+function showSecret() {
+    document.getElementById("secret").style.display = "block";
+    hearts();
+}
+
+function kiss() {
+    document.getElementById("kiss").innerText =
+        "Muaaaaaah! 💋💋💋 Love you!";
+    hearts();
+}
+
+function hearts() {
+    for (let i = 0; i < 20; i++) {
+        createHeart();
+    }
+}
+
+function createHeart() {
+    const h = document.createElement("div");
+
+    h.className = "heart";
+
+    const symbols = ["❤️", "💕", "💗", "💖", "🐰", "✨"];
+
+    h.innerHTML = symbols[
+        Math.floor(Math.random() * symbols.length)
+    ];
+
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.fontSize = (18 + Math.random() * 25) + "px";
+    h.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+    document.body.appendChild(h);
+
+    setTimeout(() => h.remove(), 8000);
+}
+
+setInterval(createHeart, 600);
+
+</script>
+
+</body>
+</html>
